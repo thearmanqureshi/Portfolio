@@ -336,6 +336,7 @@ nav > span > h1 {
 #reachout > h3 {
     font-size: 1.5rem;
     font-family: var(--raleway-font);
+    margin-bottom: 10px;
 }
 
 #sociallinks {
