@@ -129,6 +129,15 @@ nav > span > h1 {
 }
 
 /* Resume */
+.heading {
+  width: fit-content;
+  height: fit-content;
+  position: sticky;
+  top: 50px;
+  left: 0;
+  padding-top: 50px;
+}
+
 #resumesec {
   background-color: var(--primary-bg);
   color: var(--text-clr);
@@ -137,18 +146,10 @@ nav > span > h1 {
 
 .heading > h2 {
   text-align: left;
-  position: sticky;
-  top: 50px;
-  left: 0;
-  bottom: 100px;
-  padding-top: 50px;
 }
 
 .heading > a {
   font-family: var(--para-font);
-  position: sticky;
-  top: 138px;
-  left: 0;
 }
 
 #experience {
@@ -255,9 +256,6 @@ nav > span > h1 {
 
 .heading > p {
   font-family: var(--para-font);
-  position: sticky;
-  top: 138px;
-  left: 0;
 }
 
 .container {
