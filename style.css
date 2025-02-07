@@ -227,19 +227,19 @@ nav > span > h1 {
 }
 
 .content {
-    position: relative;
+  position: relative;
 }
 
 .prjdemo {
-    position: absolute;
-    right: 5px;
-    top: 15px;
+  position: absolute;
+  right: 5px;
+  top: 15px;
 }
 
 .prjdemo a {
-    margin-right: 5px;
-    font-family: var(--poppins-font);
-    font-size: .9rem;
+  margin-right: 5px;
+  font-family: var(--poppins-font);
+  font-size: 0.9rem;
 }
 
 #resumelink {
@@ -271,92 +271,97 @@ nav > span > h1 {
 }
 
 .img img {
-    width: 450px;
+  width: 450px;
 }
 
 .cards {
-    width: 80%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border: 1px solid var(--card-border);
-    padding: 10px;
-    margin-inline: auto;
-    margin-bottom: 40px;
-    transition: opacity .2s ease-in-out;
+  width: fit-content;
+  max-width: 950px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid var(--card-border);
+  padding: 10px;
+  margin-bottom: 40px;
+  transition: opacity 0.2s ease-in-out;
 }
 
-.items:hover .cards:not(:hover) {
-    opacity: .5;
+#cardsContainer {
+  width: max-content;
+  margin: auto;
+}
+
+#cardsContainer:hover .cards:not(:hover) {
+  opacity: 0.5;
 }
 
 .cards:hover {
-    opacity: 1;
+  opacity: 1;
 }
 
-
 .cards:last-child {
-    margin-bottom: 0;
+  margin-bottom: 0;
 }
 
 .content {
-    padding: 20px;
+  padding: 20px;
 }
 
 .content > h5 {
-    font-family: var(--poppins-font);
+  font-family: var(--poppins-font);
 }
 
 .content > h3 {
-    font-family: var(--raleway-font);
-    font-size: 1.7rem;
-    margin-bottom: 8px;
+  font-family: var(--raleway-font);
+  font-size: 1.7rem;
+  margin-bottom: 8px;
 }
 
 .content > p {
-    font-family: var(--para-font);
-    line-height: 1.5rem;
+  font-family: var(--para-font);
+  line-height: 1.5rem;
 }
 
 /* Contact */
 #contactsec {
-    background-color: var(--primary-bg);
-    color: var(--text-clr);
-    padding: 50px 50px 50px 150px;
+  background-color: var(--primary-bg);
+  color: var(--text-clr);
+  padding: 50px 50px 50px 150px;
 }
 
 #reachout {
-    width: 65%;
-    margin-inline: auto;
-    margin-bottom: 40px;
+  width: 65%;
+  margin-inline: auto;
+  margin-bottom: 40px;
 }
 
 #reachout > h3 {
-    font-size: 1.5rem;
-    font-family: var(--raleway-font);
-    margin-bottom: 10px;
+  font-size: 1.5rem;
+  font-family: var(--raleway-font);
+  margin-bottom: 10px;
 }
 
 #sociallinks {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: flex-start;
-    font-family: var(--para-font);
-    font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  font-family: var(--para-font);
+  font-size: 1.2rem;
 }
 
 #sendmsg {
-    width: 65%;
-    margin-inline: auto;
+  width: 65%;
+  margin-inline: auto;
 }
 
 #sendmsg > h3 {
-    font-size: 1.5rem;
-    font-family: var(--raleway-font);
+  font-size: 1.5rem;
+  font-family: var(--raleway-font);
 }
 
-input, textarea {
+input,
+textarea {
   outline: none;
   background: transparent;
   border: none;
@@ -369,7 +374,8 @@ input, textarea {
   border-bottom: 2px solid var(--text-clr);
 }
 
-.input-box, .message-box {
+.input-box,
+.message-box {
   width: 100%;
   margin: 30px 0;
   position: relative;
@@ -383,7 +389,8 @@ textarea {
   resize: none;
 }
 
-.input-box label, .message-box label {
+.input-box label,
+.message-box label {
   position: absolute;
   left: 2%;
   transform: translateY(-50%);
@@ -404,7 +411,7 @@ textarea {
 }
 
 .input-box input:focus ~ label,
-.input-box input:valid ~ label{
+.input-box input:valid ~ label {
   top: -1px;
 }
 
@@ -423,7 +430,7 @@ textarea {
   outline: none;
   border-radius: 6px;
   cursor: pointer;
-  transition: background .2s;
+  transition: background 0.2s;
 }
 
 #result:hover {
@@ -433,7 +440,7 @@ textarea {
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
-input:-webkit-autofill:active{
+input:-webkit-autofill:active {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -456,12 +463,13 @@ input:-webkit-autofill:active{
   border-bottom: 2px solid #dc3545;
 }
 
-.empty-feedback p, .invalid-feedback p {
+.empty-feedback p,
+.invalid-feedback p {
   position: absolute;
   right: 0;
   top: 0;
   color: var(--text-hover);
-  font-size: .8em;
+  font-size: 0.8em;
   font-style: italic;
   font-family: var(--para-font);
   text-transform: capitalize;
