@@ -556,37 +556,22 @@ footer {
     text-align: center;
   }
 
-  .heading.sticky h2 {
-    font-size: 1.3rem;
-  }
-
-  .heading.sticky a {
-    font-size: 0.9rem;
-    text-align: center;
-    text-wrap: nowrap;
-  }
-
-  .heading.sticky p {
-    font-size: 0.9rem;
-  }
-
   .heading {
     width: 100%;
-    top: 55px;
-    padding: 5px 0 5px 0;
-    z-index: 9;
+    position: relative;
     text-align: center;
-    background: transparent;
-    backdrop-filter: blur(10px);
-    box-shadow: 0px 1px 10px var(--se);
+    margin-bottom: 40px;
   }
 
   #experience {
     margin-inline: 0;
+    transform: scale(.8);
+    margin-bottom: 0;
   }
 
   #education {
     margin-inline: 0;
+    transform: scale(.8);
   }
 
   .items {
@@ -607,10 +592,12 @@ footer {
 
   #reachout {
     margin-inline: 0;
+    width: 100%;
   }
 
   #sendmsg {
     margin-inline: 0;
+    width: 100%;
   }
 }
 
