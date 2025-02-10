@@ -104,6 +104,10 @@ nav > span > h1 {
   gap: 10px;
 }
 
+#menu-open {
+  display: none;
+}
+
 /* Hero */
 #hero {
   background-color: var(--secondary-bg);
@@ -129,6 +133,14 @@ nav > span > h1 {
 }
 
 /* Resume */
+.container {
+  display: flex;
+}
+
+.items {
+  width: 70%;
+}
+
 .heading {
   width: fit-content;
   height: fit-content;
@@ -156,7 +168,8 @@ nav > span > h1 {
   background-color: var(--card-color);
   color: var(--text-clr);
   border-top: 4px solid var(--card-border);
-  width: 65%;
+  min-width: 500px;
+  max-width: 65%;
   margin-inline: auto;
   padding: 30px 20px 40px 20px;
   margin-bottom: 40px;
@@ -174,7 +187,8 @@ nav > span > h1 {
   background-color: var(--card-color);
   color: var(--text-clr);
   border-top: 4px solid var(--card-border);
-  width: 65%;
+  min-width: 500px;
+  max-width: 65%;
   margin-inline: auto;
   padding: 30px 20px 40px 20px;
 }
@@ -258,16 +272,8 @@ nav > span > h1 {
   font-family: var(--para-font);
 }
 
-.container {
-  display: flex;
-}
-
 .heading {
   width: 30%;
-}
-
-.items {
-  width: 70%;
 }
 
 .img img {
@@ -494,4 +500,130 @@ footer {
 
 #socials > a:hover {
   color: var(--text-hover);
+}
+
+/* Multi Device Compatibility */
+@media only screen and (max-width: 1500px) {
+  .cards {
+    flex-wrap: wrap;
+    max-width: 500px;
+  }
+}
+
+@media only screen and (max-width: 1100px) {
+  .container {
+    gap: 40px;
+  }
+}
+
+@media only screen and (max-width: 870px) {
+  #navbar li a {
+    display: none;
+  }
+
+  #menu-open {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+
+  #hero {
+    align-items: center;
+    padding: 50px;
+  }
+
+  .container {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #resumesec {
+    padding: 50px;
+  }
+
+  #prjsec {
+    padding: 50px;
+  }
+
+  #contactsec {
+    padding: 50px;
+  }
+
+  .heading h2,
+  p {
+    text-align: center;
+  }
+
+  .heading.sticky h2 {
+    font-size: 1.3rem;
+  }
+
+  .heading.sticky a {
+    font-size: 0.9rem;
+    text-align: center;
+    text-wrap: nowrap;
+  }
+
+  .heading.sticky p {
+    font-size: 0.9rem;
+  }
+
+  .heading {
+    width: 100%;
+    top: 55px;
+    padding: 5px 0 5px 0;
+    z-index: 9;
+    text-align: center;
+    background: transparent;
+    backdrop-filter: blur(10px);
+    box-shadow: 0px 1px 10px var(--se);
+  }
+
+  #experience {
+    margin-inline: 0;
+  }
+
+  #education {
+    margin-inline: 0;
+  }
+
+  .items {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .cards {
+    transform: scalex(0.8);
+  }
+
+  #cardsContainer {
+    margin-inline: 0;
+  }
+
+  #reachout {
+    margin-inline: 0;
+  }
+
+  #sendmsg {
+    margin-inline: 0;
+  }
+}
+
+@media only screen and (max-width: 540px) {
+  #experience {
+    min-width: 440px;
+  }
+
+  #education {
+    min-width: 440px;
+  }
+
+  #cardsContainer {
+    width: fit-content;
+  }
 }
