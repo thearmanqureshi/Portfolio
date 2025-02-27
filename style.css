@@ -635,6 +635,10 @@ footer {
     margin: 0 0 -50px 0;
   }
 
+  .cards p {
+    text-align: left;
+  }
+
   #cardsContainer {
     margin-inline: 0;
   }
