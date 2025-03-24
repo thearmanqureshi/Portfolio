@@ -10,6 +10,8 @@ This is my personal portfolio website, built using **HTML, CSS, and JavaScript**
 - **Resume Section** – Displays My Work Experience.
 - **Contact Form** – Allows visitors to reach out easily.
 
+![Lighthouse Report](https://github.com/thearmanqureshi/Portfolio/blob/eafd1e39b4bda3a190cb0c4ef8a9176494aade65/img/Lighthouse%20Report.png)
+
 ## Tech Stack
 - **Frontend:** HTML, CSS, JavaScript
 - **Deployment:** Vercel
