@@ -38,7 +38,7 @@ To deploy on Vercel:
    ```
 
 ## Usage
-Visit the website at [https://thearmanqureshi.vercel.app](https://thearmanqureshi.vercel.app) to explore my work and get in touch.
+Visit the website at [thearmanqureshi.vercel.app](https://thearmanqureshi.vercel.app) to explore my work and get in touch.
 
 ## Contribution
 Feel free to suggest improvements or report issues by opening an issue on GitHub.
@@ -47,5 +47,5 @@ Feel free to suggest improvements or report issues by opening an issue on GitHub
 This project is licensed under the Apache License 2.0.
 
 ## Contact
-For any inquiries, reach out via the contact form on my website.
+For any inquiries, reach out via the contact form on my [website](https://thearmanqureshi.vercel.app).
 
