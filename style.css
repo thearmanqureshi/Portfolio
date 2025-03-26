@@ -14,6 +14,9 @@
   --cinzel-font: "Cinzel", serif;
   --raleway-font: "Raleway", serif;
   --poppins-font: "Poppins", serif;
+  /* Disabling Zoom */
+  touch-action: pan-x pan-y;
+  height: 100% 
 }
 
 /* Global CSS */
