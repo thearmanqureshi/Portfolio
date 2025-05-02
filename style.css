@@ -135,6 +135,12 @@ nav > span > h1 {
   font-weight: 500;
 }
 
+#hero > p {
+  font-family: var(--para-font);
+  margin-top: 15px;
+  font-size: 1.1rem;
+}
+
 /* Resume */
 .container {
   display: flex;
@@ -665,6 +671,12 @@ footer {
   #hero h1 {
     font-size: 2rem;
   }
+
+  #hero p {
+    margin-top: 10px;
+    font-size: .95rem;
+  }
+
   .heading {
     padding: 0;
   }
