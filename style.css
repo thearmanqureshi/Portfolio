@@ -99,6 +99,7 @@ nav {
 nav > span > h1 {
   font-family: var(--cinzel-font);
   font-weight: 500;
+  font-size: 1.7rem;
 }
 
 #navbar {
@@ -714,3 +715,4 @@ footer {
     padding: 30px;
   }
 }
+
