@@ -47,7 +47,7 @@ Visit the website at [thearmanqureshi.vercel.app](https://thearmanqureshi.vercel
 Feel free to suggest improvements or report issues by opening an issue on GitHub.
 
 ## License
-This project is licensed under the Apache License 2.0.
+This project is licensed under the [Apache License 2.0](https://www.apache.org/licenses/LICENSE-2.0).
 
 ## Contact
 For any inquiries, reach out via the contact form on my [website](https://thearmanqureshi.vercel.app).
