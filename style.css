@@ -24,8 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--default-font);
-  scroll-behavior: smooth;
+  font-family: var(--default-font); 
 }
 
 body {

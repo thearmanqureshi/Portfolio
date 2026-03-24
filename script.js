@@ -1,8 +1,24 @@
 // Current Year on Footer
 document.getElementById("year").innerHTML = new Date().getFullYear();
 
-// Lennis JS Library
+// Lenis JS Library
 const lenis = new Lenis();
+
+// Handle navbar anchor links
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const href = this.getAttribute('href');
+    const navHeight = document.querySelector('header').offsetHeight;
+
+    if (href === '#top') {
+      lenis.scrollTo(0);
+    } else {
+      const target = document.querySelector(href);
+      if (target) lenis.scrollTo(target, { offset: -navHeight });
+    }
+  });
+});
 
 function raf(time) {
   lenis.raf(time);
