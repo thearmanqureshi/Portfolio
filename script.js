@@ -100,5 +100,15 @@ requestAnimationFrame(raf);
 
 // Toogle Menu
 document.querySelector('#menu').addEventListener('click', () => {
-  document.querySelector('nav').classList.toggle('navactive')
+  const nav = document.querySelector('nav');
+
+  if (nav.classList.contains('navactive')) {
+    nav.style.animation = 'fadeOut 0.4s ease-in-out';
+    setTimeout(() => {
+      nav.classList.remove('navactive');
+      nav.style.animation = '';
+    }, 380);
+  } else {
+    nav.classList.add('navactive');
+  }
 });

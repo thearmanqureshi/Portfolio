@@ -16,7 +16,7 @@
   --poppins-font: "Poppins", serif;
   /* Disabling Zoom */
   touch-action: pan-x pan-y;
-  height: 100% 
+  height: 100%;
 }
 
 /* Global CSS */
@@ -24,7 +24,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: var(--default-font); 
+  font-family: var(--default-font);
 }
 
 body {
@@ -538,6 +538,17 @@ footer {
     }
   }
 
+  @keyframes fadeOut {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+}
+
   #navbar li a {
     display: none;
   }
@@ -560,6 +571,7 @@ footer {
   }
 
   nav,
+  nav.navactive > span,
   #navbar li a,
   #menu-close {
     animation: fade 0.4s ease-in-out;
@@ -674,7 +686,7 @@ footer {
 
   #hero p {
     margin-top: 10px;
-    font-size: .95rem;
+    font-size: 0.95rem;
   }
 
   .heading {
@@ -714,4 +726,3 @@ footer {
     padding: 30px;
   }
 }
-
