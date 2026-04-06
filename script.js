@@ -1,3 +1,12 @@
+// PreLoader
+window.addEventListener('load', () => {
+  const minDisplay = new Promise(resolve => setTimeout(resolve, 2500));
+  minDisplay.then(() => {
+    document.getElementById('loader').classList.add('hidden');
+  });
+});
+
+
 // Current Year on Footer
 document.getElementById("year").innerHTML = new Date().getFullYear();
 

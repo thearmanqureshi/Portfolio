@@ -1,7 +1,37 @@
-/* Fonts Import */
+/* ══════════════════════════════════════════════════════════════════════
+   STYLE.CSS — Portfolio Stylesheet
+   ══════════════════════════════════════════════════════════════════════
+
+   TABLE OF CONTENTS
+   ─────────────────
+   1.  Fonts
+   2.  Custom Properties
+   3.  Reset & Global
+   4.  Scrollbar
+   5.  Preloader
+   6.  Navbar
+   7.  Hero
+   8.  Resume Section
+   9.  Projects Section
+   10. Contact Section
+   11. Footer
+   12. Responsive Breakpoints
+       12a. ≤ 1500px
+       12b. ≤ 1100px
+       12c. ≤ 870px (mobile)
+       12d. ≤ 540px (small mobile)
+   ══════════════════════════════════════════════════════════════════════ */
+
+/* ══════════════════════════════
+   1. FONTS
+══════════════════════════════ */
+
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap");
 
-/* Custom CSS */
+/* ══════════════════════════════
+   2. CUSTOM PROPERTIES
+══════════════════════════════ */
+
 :root {
   --primary-bg: #020617;
   --secondary-bg: #0f172a;
@@ -14,12 +44,15 @@
   --cinzel-font: "Cinzel", serif;
   --raleway-font: "Raleway", serif;
   --poppins-font: "Poppins", serif;
-  /* Disabling Zoom */
+  /* Disable pinch-zoom on touch devices */
   touch-action: pan-x pan-y;
   height: 100%;
 }
 
-/* Global CSS */
+/* ══════════════════════════════
+   3. RESET & GLOBAL
+══════════════════════════════ */
+
 * {
   margin: 0;
   padding: 0;
@@ -37,6 +70,7 @@ section h2 {
   font-family: var(--raleway-font);
 }
 
+/* Animated underline on all anchor tags */
 a {
   position: relative;
   text-decoration: none;
@@ -63,7 +97,10 @@ a:hover::after {
   width: 100%;
 }
 
-/* Custom Scrollbar */
+/* ══════════════════════════════
+   4. SCROLLBAR
+══════════════════════════════ */
+
 ::-webkit-scrollbar {
   width: 10px;
 }
@@ -77,7 +114,96 @@ a:hover::after {
   background-color: var(--primary-bg);
 }
 
-/* Navbar */
+/* ══════════════════════════════
+   5. PRELOADER
+══════════════════════════════ */
+
+#loader {
+  position: fixed;
+  inset: 0;
+  background: #020617;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  transition:
+    opacity 0.5s ease,
+    visibility 0.5s ease;
+}
+
+#loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+}
+
+.loader-logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 16px;
+  opacity: 0;
+  transform: scale(0.85);
+  animation: fadeScaleIn 0.7s cubic-bezier(0.22, 1, 0.36, 1) 0.3s forwards;
+}
+
+.loader-bar-wrap {
+  width: 48px;
+  height: 2px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2px;
+  overflow: hidden;
+  opacity: 0;
+  animation: fadeIn 0.4s ease 0.8s forwards;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  background: #ffffff;
+  border-radius: 2px;
+  animation: fillBar 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.9s forwards;
+}
+
+.loader-name {
+  font-family: Georgia, serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  margin-top: 14px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease 1s forwards;
+}
+
+@keyframes fadeScaleIn {
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fillBar {
+  0% {
+    width: 0%;
+  }
+  60% {
+    width: 80%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+/* ══════════════════════════════
+   6. NAVBAR
+══════════════════════════════ */
+
 header {
   position: sticky;
   top: 0;
@@ -107,11 +233,15 @@ nav > span > h1 {
   gap: 10px;
 }
 
+/* Hamburger — hidden on desktop, shown on mobile */
 #menu {
   display: none;
 }
 
-/* Hero */
+/* ══════════════════════════════
+   7. HERO
+══════════════════════════════ */
+
 #hero {
   background-color: var(--secondary-bg);
   color: var(--text-clr);
@@ -141,7 +271,17 @@ nav > span > h1 {
   font-size: 1.1rem;
 }
 
-/* Resume */
+/* ══════════════════════════════
+   8. RESUME SECTION
+══════════════════════════════ */
+
+#resumesec {
+  background-color: var(--primary-bg);
+  color: var(--text-clr);
+  padding: 50px 50px 50px 150px;
+}
+
+/* Sticky section heading + download link */
 .container {
   display: flex;
 }
@@ -159,12 +299,6 @@ nav > span > h1 {
   padding-top: 50px;
 }
 
-#resumesec {
-  background-color: var(--primary-bg);
-  color: var(--text-clr);
-  padding: 50px 50px 50px 150px;
-}
-
 .heading > h2 {
   text-align: left;
 }
@@ -173,6 +307,7 @@ nav > span > h1 {
   font-family: var(--para-font);
 }
 
+/* Experience & Education cards */
 #experience {
   background-color: var(--card-color);
   color: var(--text-clr);
@@ -206,6 +341,7 @@ nav > span > h1 {
   margin-bottom: 30px;
 }
 
+/* Timeline items — left-border + dot indicator */
 .resumeitem {
   padding: 0 0 35px 25px;
   position: relative;
@@ -249,10 +385,17 @@ nav > span > h1 {
   font-size: 1.2rem;
 }
 
-.content {
-  position: relative;
+/* ══════════════════════════════
+   9. PROJECTS SECTION
+══════════════════════════════ */
+
+#prjsec {
+  background-color: var(--secondary-bg);
+  color: var(--text-clr);
+  padding: 50px 50px 50px 150px;
 }
 
+/* Project links inside resume items */
 .prjdemo {
   position: absolute;
   right: 5px;
@@ -263,18 +406,6 @@ nav > span > h1 {
   margin-right: 5px;
   font-family: var(--poppins-font);
   font-size: 0.9rem;
-}
-
-#resumelink {
-  text-align: center;
-  margin-top: 20px;
-}
-
-/* Projects */
-#prjsec {
-  background-color: var(--secondary-bg);
-  color: var(--text-clr);
-  padding: 50px 50px 50px 150px;
 }
 
 .heading > p {
@@ -289,6 +420,7 @@ nav > span > h1 {
   width: 450px;
 }
 
+/* Hover-dimming card group: non-hovered cards fade to 0.5 opacity */
 .cards {
   width: fit-content;
   max-width: 950px;
@@ -319,6 +451,7 @@ nav > span > h1 {
 }
 
 .content {
+  position: relative;
   padding: 20px;
 }
 
@@ -337,7 +470,10 @@ nav > span > h1 {
   line-height: 1.5rem;
 }
 
-/* Contact */
+/* ══════════════════════════════
+   10. CONTACT SECTION
+══════════════════════════════ */
+
 #contactsec {
   background-color: var(--primary-bg);
   color: var(--text-clr);
@@ -365,6 +501,7 @@ nav > span > h1 {
   font-size: 1.2rem;
 }
 
+/* Contact form */
 #sendmsg {
   width: 65%;
   margin-inline: auto;
@@ -404,6 +541,7 @@ textarea {
   resize: none;
 }
 
+/* Floating labels — animate upward on focus or valid input */
 .input-box label,
 .message-box label {
   position: absolute;
@@ -435,6 +573,7 @@ textarea {
   top: -10px;
 }
 
+/* Submit button */
 #result {
   width: 100%;
   height: 40px;
@@ -452,6 +591,7 @@ textarea {
   background-color: var(--secondary-bg);
 }
 
+/* Prevent autofill from overriding text color */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
 input:-webkit-autofill:focus,
@@ -460,6 +600,7 @@ input:-webkit-autofill:active {
   -webkit-text-fill-color: transparent;
 }
 
+/* Inline form validation feedback */
 .invalid-feedback,
 .empty-feedback {
   display: none;
@@ -490,7 +631,10 @@ input:-webkit-autofill:active {
   text-transform: capitalize;
 }
 
-/* Footer */
+/* ══════════════════════════════
+   11. FOOTER
+══════════════════════════════ */
+
 footer {
   height: 100px;
   background-color: var(--primary-bg);
@@ -511,7 +655,11 @@ footer {
   color: var(--text-hover);
 }
 
-/* Multi Device Compatibility */
+/* ══════════════════════════════
+   12. RESPONSIVE BREAKPOINTS
+══════════════════════════════ */
+
+/* 12a. ≤ 1500px — wrap project cards to single column */
 @media only screen and (max-width: 1500px) {
   .cards {
     flex-wrap: wrap;
@@ -519,19 +667,21 @@ footer {
   }
 }
 
+/* 12b. ≤ 1100px — add gap between resume columns */
 @media only screen and (max-width: 1100px) {
   .container {
     gap: 40px;
   }
 }
 
+/* 12c. ≤ 870px — mobile layout, hamburger menu, stacked sections */
 @media only screen and (max-width: 870px) {
+  /* Hamburger open/close animations */
   @keyframes fade {
     from {
       opacity: 0;
       transform: translateY(-10px);
     }
-
     to {
       opacity: 1;
       transform: translateY(0);
@@ -539,16 +689,17 @@ footer {
   }
 
   @keyframes fadeOut {
-  from {
-    opacity: 1;
-    transform: translateY(0);
+    from {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    to {
+      opacity: 0;
+      transform: translateY(-10px);
+    }
   }
-  to {
-    opacity: 0;
-    transform: translateY(-10px);
-  }
-}
 
+  /* Nav links hidden until menu opens */
   #navbar li a {
     display: none;
   }
@@ -577,6 +728,7 @@ footer {
     animation: fade 0.4s ease-in-out;
   }
 
+  /* Expanded nav state */
   nav.navactive {
     flex-direction: column;
     gap: 10px;
@@ -597,11 +749,13 @@ footer {
     display: flex;
   }
 
+  /* Hero — centered on mobile */
   #hero {
     align-items: center;
     padding: 50px;
   }
 
+  /* Stacked layout for resume + projects */
   .container {
     flex-direction: column;
     justify-content: center;
@@ -620,8 +774,7 @@ footer {
     padding: 50px;
   }
 
-  .heading h2,
-  p {
+  .heading h2, p {
     text-align: center;
   }
 
@@ -632,6 +785,7 @@ footer {
     margin-bottom: 40px;
   }
 
+  /* Scale down cards and resume blocks to fit narrow screens */
   #experience {
     margin-inline: 0;
     transform: scale(0.8);
@@ -675,6 +829,7 @@ footer {
   }
 }
 
+/* 12d. ≤ 540px — small mobile adjustments */
 @media only screen and (max-width: 540px) {
   nav {
     padding: 15px 40px;
@@ -693,10 +848,7 @@ footer {
     padding: 0;
   }
 
-  #experience {
-    min-width: 440px;
-  }
-
+  #experience,
   #education {
     min-width: 440px;
   }
