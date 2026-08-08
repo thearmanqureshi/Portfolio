@@ -1,7 +1,7 @@
 # Personal Portfolio Website
 This repository contains the code for my personal portfolio website, built with HTML, CSS, and vanilla JavaScript. It is designed to showcase my skills, projects, and professional experience as a web developer through a clean, responsive, and user-friendly interface.
 
-The live website can be viewed at: **[thearmanqureshi.me](https://www.thearmanqureshi.me)**
+The live website can be viewed at: **[thearmanqureshi.vercel.app](https://thearmanqureshi.vercel.app)**
 
 ## Screenshots
 
